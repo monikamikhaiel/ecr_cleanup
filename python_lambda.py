@@ -76,7 +76,7 @@ def lambda_handler(event, context):
     ecr_client = boto3.client('ecr')
     response = (ecr_client.describe_repositories(registryId='063605733848'))['repositories']
     ## remove some repos 
-    remove_repos=['backstage','eight','load-recommendation','actions-runner-dind','openroute-gcc','openroute-eg','openroute-pk','k8s-gh-runner','configuration','demand-modelling-eg-domestic','geofencing','landing','performance','warehouse','transactions-api-test','web','urlshortener']
+    remove_repos=[["REPONAME_TO_BE_EXCLUDED_1","REPONAME_TO_BE_EXCLUDED_2","REPONAME_TO_BE_EXCLUDED_3",........]]
     all_repo_names=[y['repositoryName'] for y in response if y['repositoryName'] not in remove_repos]
     for repository_name in all_repo_names :
     # # repo

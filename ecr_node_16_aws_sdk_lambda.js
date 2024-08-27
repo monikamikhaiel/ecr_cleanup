@@ -5,7 +5,7 @@ import AWS from '/var/runtime/node_modules/aws-sdk/lib/aws.js';
 AWS.config.update({ region: 'eu-west-1' }); // Replace with your region
 
 const ecr = new AWS.ECR();
-const repositoryNamesToRemove = ["backstage","eight","load-recommendation","actions-runner-dind","openroute-gcc","openroute-eg","openroute-pk","k8s-gh-runner","configuration","demand-modelling-eg-domestic","geofencing","landing","performance","warehouse","transactions-api-test","web","urlshortener"];
+const repositoryNamesToRemove = [["REPONAME_TO_BE_EXCLUDED_1","REPONAME_TO_BE_EXCLUDED_2","REPONAME_TO_BE_EXCLUDED_3",........]];
 
 // Fetch all images from a repository
 async function fetchAllImages(repositoryName, feature) {
